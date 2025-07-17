@@ -30,7 +30,7 @@ function PraductsList() {
           {
             praductsList.map((item) => (
               <div key={item.id}>
-                <Link href={`#`} className='praductslist_card'>
+                <Link href={`/routes/praductslist/${item.id}`} className='praductslist_card'>
                   <>
                     <div className="praducts_card-img">
                       <img src={item.img} alt={item.name} />
