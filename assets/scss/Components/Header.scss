@@ -1,0 +1,194 @@
+.header {
+    padding: 16px 0;
+
+    &_row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &_logo {
+        width: 113px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+
+    &_katalog-btn {
+        margin: 0 15px;
+        padding: 8px 12px;
+        background-color: $gray-1;
+        border-radius: 8px;
+        flex-shrink: 0;
+
+        display: flex;
+        align-items: center;
+        column-gap: 7px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: $gray-2;
+        }
+    }
+
+    &_katalog-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    &_katalog-btn-content {
+        font-size: 14px;
+
+
+        @include media(965) {
+            display: none;
+        }
+    }
+
+    &_search {
+        position: relative;
+        width: 100%;
+        max-width: 385px;
+        height: 40px;
+        background-color: $gray-1;
+        border: 1px solid $gray-1;
+        border-radius: 5px;
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &_input {
+        height: inherit;
+        width: 100%;
+        font-size: 14px;
+        padding: 0 10px;
+        background-color: white;
+    }
+
+    &_search-btn {
+        padding: 0 15px;
+        height: 100%;
+
+        &:hover{
+            background-color: $gray-2;
+        }
+    }
+
+    &_clear-btn {
+        position: absolute;
+        right: 60px;
+    }
+
+    &_nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &_link {
+        padding: 0 10px;
+        font-size: 12px;
+        color: $gray-3;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1px;
+
+        &:hover path {
+            stroke: $gray-1;
+            transition: all 0.1s ease;
+        }
+
+        @include media(820) {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    &_login-btn {
+        border: 1px solid $gray-1;
+        padding: 7px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.1s ease;
+
+        &:hover {
+            background-color: $gray-4;
+        }
+    }
+
+    &_lang {
+        display: flex;
+        align-items: center;
+    }
+
+    &_langue {
+        cursor: pointer;
+        flex-shrink: 0;
+        margin: 0px 0 0 10px;
+    }
+
+    &_langue:not(:last-child) {
+        color: $gray-5;
+    }
+
+    @include media(750) {
+
+        &_row {
+            display: none;
+        }
+
+        &_mobile {
+            display: block !important;
+        }
+
+        padding: 10px 0;
+    }
+
+    // Mobile - Start
+
+    &_mobile {
+        display: none;
+    }
+
+    &_mobile-search {
+        border: 1px solid $gray-6;
+        border-radius: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+
+        svg path {
+            fill: $gray-1;
+        }
+
+        &:focus-within {
+            border-color: $gray-1;
+            font-size: 14px;
+        }
+    }
+
+    &_mobile-input {
+        width: 100%;
+        font-size: 14px;
+        padding: 7px 5px ;
+    }
+
+    &_mobile-clear-btn {
+        path {
+            fill: $gray-7 !important;
+        }
+    }
+
+    &_mobile-search-btn {
+        border-radius: 8px;
+        background-color: $gray-8;
+        padding: 6px 12px;
+        margin-left: 5px;
+        font-size: 14px;
+    }
+}

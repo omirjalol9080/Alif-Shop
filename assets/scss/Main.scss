@@ -1,0 +1,30 @@
+// Globals
+@import './Globals/globals';
+@import './Globals/mixins';
+@import './Globals/norimalize';
+@import './Globals/veriables';
+
+
+// Divider Line
+@import './Components/DividerLine.scss';
+
+// BottomNavigation
+@import './Components/BtmNavigation.scss';
+
+// Header
+@import './Components/Header.scss';
+
+// Catigores
+@import './Components/Catigores.scss';
+
+// Banners
+@import './Components/Banners.scss';
+
+// BannerCatigores
+@import './Components/BannerCatigores.scss';
+
+// Praducts
+@import './Components/Praducts.scss';
+
+// PraductsList
+@import './Components/PraductsList.scss'

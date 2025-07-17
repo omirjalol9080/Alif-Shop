@@ -1,0 +1,6 @@
+// mixins.scss
+@mixin media($size) {
+  @media screen and (max-width: #{$size}px) {
+    @content;
+  }
+}

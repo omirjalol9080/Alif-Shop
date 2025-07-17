@@ -1,0 +1,58 @@
+.catigores {
+    margin-bottom: 16px;
+
+    &_row {
+        display: flex;
+        align-items: center;
+    }
+
+    &_list {
+        width: 100%;
+        max-width: 1050px;
+        overflow-x: auto;
+        scrollbar-width: none;
+
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        color: $gray-9;
+    }
+
+    &_link {
+        position: relative;
+        font-size: 14px;
+        transition: all 0.1s ease;
+        margin: 5px 0;
+        flex-shrink: 0;
+
+        &:hover {
+            color: $gray-10;
+
+            &::before {
+                width: 100%;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $gray-10;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &_btn {
+        display: flex;
+        align-items: center;
+        column-gap: 2px;
+    }
+
+    @include media(750){
+        display: none;
+    }
+}

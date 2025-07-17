@@ -1,0 +1,92 @@
+.wr {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.3;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+
+
+
+
+
+// Banner Swiper - Start
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 50px;
+    background-color: rgba(175, 175, 175, 0.329);
+    color: #505c6a !important;
+    border: 1px solid transparent;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+    color: #ffbe1f;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    border-color: #bbb;
+    background-color: #fff;
+}
+
+.swiper-pagination{
+    bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+    width: 13px !important;
+    height: 4px !important;
+    border-radius: 50px !important;
+    background-color: #E3E8EA !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #FFBE1F !important;
+}
+
+@media screen and (max-width: 750px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        background-color: transparent !important;
+        border: none !important;
+        color: white !important;
+        opacity: 1 !important;
+    }
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-weight: 900 !important;
+    }
+
+    
+}
+
+// Banner Swiper - End
+
+
+
+

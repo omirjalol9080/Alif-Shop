@@ -1,0 +1,32 @@
+.banner {
+    &_swiper {
+        height: 100%;
+        max-height: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    
+    @include media(750) {
+        
+        .swiper-pagination-bullet {
+            width: 8px !important;
+            height: 8px !important;
+        }
+
+        &_swiper {
+            border-radius: 0;
+            height: 146px;
+        }
+
+        &_img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            padding: 0;
+        }
+    }
+}
