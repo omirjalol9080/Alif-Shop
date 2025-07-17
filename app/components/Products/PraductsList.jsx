@@ -31,13 +31,15 @@ function PraductsList() {
             praductsList.map((item) => (
               <div key={item.id}>
                 <Link href={`#`} className='praductslist_card'>
-                  <div className="praducts_card-img">
-                    <img src={item.img} alt={item.name} />
-                  </div>
-                  <h3 className="praducts_card-title">{item.name}</h3>
-                  <p className='praducts_card-tobe'>dan {Math.ceil(item.prices / 24).toLocaleString('ru-RU')} so'm/oyga</p>
-                  <p className='praducts_card-delprice'>{item.oldprices}</p>
-                  <p className='praducts_card-price'>{item.prices}</p>
+                  <>
+                    <div className="praducts_card-img">
+                      <img src={item.img} alt={item.name} />
+                    </div>
+                    <h3 className="praducts_card-title">{item.name}</h3>
+                    <p className='praducts_card-tobe'>dan {Math.ceil(item.prices / 24).toLocaleString('ru-RU')} so'm/oyga</p>
+                    <p className='praducts_card-delprice'>{item.oldprices}</p>
+                    <p className='praducts_card-price'>{item.prices}</p>
+                  </>
                   <button className='praducts_card-addcard'><CardIcon /> Savatga</button>
                 </Link>
               </div>
