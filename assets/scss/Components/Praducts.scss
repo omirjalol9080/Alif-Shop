@@ -53,7 +53,6 @@
         font-size: 12px;
         margin-bottom: 4px;
         color: $gray-10;
-
         display: -webkit-box;
         -webkit-line-clamp: 2;
         /* maksimal 2 qator */
@@ -76,6 +75,7 @@
         color: $gray-7;
         text-decoration: line-through;
         font-size: 12px;
+        height: 18px;
     }
 
     &_card-price {

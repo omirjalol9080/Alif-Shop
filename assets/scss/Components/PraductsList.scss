@@ -16,10 +16,12 @@
 
     &_card{
         height: 315px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
     }
+
+    &_card-title{
+        height: 36px;
+    }
+        
 
     &_more-btn{
         display: block;

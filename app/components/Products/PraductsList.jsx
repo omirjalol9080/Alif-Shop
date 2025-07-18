@@ -35,7 +35,7 @@ function PraductsList() {
                     <div className="praducts_card-img">
                       <img src={item.img} alt={item.name} />
                     </div>
-                    <h3 className="praducts_card-title">{item.name}</h3>
+                    <h3 className="praducts_card-title praductslist_card-title">{item.name}</h3>
                     <p className='praducts_card-tobe'>dan {Math.ceil(item.prices / 24).toLocaleString('ru-RU')} so'm/oyga</p>
                     <p className='praducts_card-delprice'>{item.oldprices}</p>
                     <p className='praducts_card-price'>{item.prices}</p>
