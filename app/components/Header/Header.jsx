@@ -7,13 +7,24 @@ import SearchIcon from '@/assets/icons/SearchIcon'
 import Link from 'next/link'
 import HeaderSearch from './HeaderSearch';
 import MobileSearch from './HeaderMobileComponent/MobileSearch';
+import { useEffect, useState } from 'react';
 function Header() {
 
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <div className='header'>
+      <section className={`header ${scrolled ? "scrolled" : ""}`}>
         <div className="container">
           <div className="header_row">
             <Link className='header_logo' href={`/`}>
@@ -52,7 +63,7 @@ function Header() {
             <MobileSearch/>
           </div>
         </div>
-      </div>
+      </section>
     </>
   )
 }

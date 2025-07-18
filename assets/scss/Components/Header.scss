@@ -1,5 +1,13 @@
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: $gray-11;
     padding: 16px 0;
+
+    &.scrolled {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
 
     &_row {
         display: flex;
@@ -70,7 +78,7 @@
         padding: 0 15px;
         height: 100%;
 
-        &:hover{
+        &:hover {
             background-color: $gray-2;
         }
     }
@@ -175,7 +183,7 @@
     &_mobile-input {
         width: 100%;
         font-size: 14px;
-        padding: 7px 5px ;
+        padding: 7px 5px;
     }
 
     &_mobile-clear-btn {
