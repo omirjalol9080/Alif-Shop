@@ -50,6 +50,10 @@
 
     @include media(750) {
 
+        .container{
+            padding: 0px;
+        }
+
         &_content {
             justify-content: space-between;
         }
