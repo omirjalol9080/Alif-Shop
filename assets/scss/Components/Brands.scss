@@ -63,6 +63,7 @@
         &_row {
             display: flex;
             overflow-x: scroll;
+            column-gap: 0px;
         }
 
         &_card {
