@@ -19,9 +19,9 @@ function Main() {
       <DividerLine/>  
       <PraductsList/>
       <DividerLine/> 
-      <Praducts title="Foydali" category="foydali" />
+      <Praducts title="Jaziramaga tayyorlaning" category="jazirama" />
       <DividerLine/> 
-      <Praducts title="Foydali" category="foydali" />
+      <Praducts title="Avtotovarlar" category="avtotovar" />
       <DividerLine/> 
       <Praducts title="Foydali" category="foydali" />
       <DividerLine/> 
