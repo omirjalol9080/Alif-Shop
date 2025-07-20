@@ -6,6 +6,7 @@ import BCatigores from '../BannerCatigores/BCatigores'
 import DividerLine from '../DividerLine/DividerLine'
 import Praducts from '../Products/Praducts'
 import PraductsList from '../Products/PraductsList'
+import Brands from '../Brands/Brands'
 
 function Main() {
   return (
@@ -40,6 +41,8 @@ function Main() {
       <Praducts title="Foydali" category="foydali" />
       <DividerLine/> 
       <Praducts title="Foydali" category="foydali" />
+      <DividerLine/>
+      <Brands/>
     </main>
   )
 }
