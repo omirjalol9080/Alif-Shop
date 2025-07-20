@@ -33,6 +33,7 @@
         width: inherit;
         overflow: hidden;
         border-radius: 10px;
+        border: 1px solid $gray-7;
 
         img {
             width: 100%;
@@ -50,7 +51,7 @@
 
     @include media(750) {
 
-        .container{
+        .container {
             padding: 0px;
         }
 
@@ -67,7 +68,7 @@
         &_card {
             width: 88px;
             height: 116px;
+            margin-left: 16px;
         }
-
     }
 }
