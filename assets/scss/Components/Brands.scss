@@ -40,4 +40,18 @@
     &_card-title{
         font-size: 16px;
     }
+
+    // Mobile 
+
+    @include media(750){
+        &_row{
+            display: flex;
+            overflow-x: scroll;
+        }
+
+        &_card{
+            width: 88px;
+            height: 116px;
+        }
+    }
 }
