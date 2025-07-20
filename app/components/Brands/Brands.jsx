@@ -23,7 +23,7 @@ function Brands() {
     return (
         <section className='brands'>
             <div className="container">
-                <div className="praducts_content">
+                <div className="brands_content">
                     <h1 className='praducts_title'>Mashhur brendlar</h1>
                     <Link className='praducts_routs' href="#">Hammasini ko'rish <LeftIcon /></Link>
                 </div>

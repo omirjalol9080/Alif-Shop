@@ -1,5 +1,11 @@
 .brands {
 
+    &_content{
+        display: flex;
+        align-items: center;
+        padding: 20px 0 15px;
+        column-gap: 20px;
+    }
 
     &_row {
         display: grid;
@@ -42,6 +48,11 @@
     // Mobile 
 
     @include media(750){
+
+        &_content{
+            justify-content: space-between;
+        }
+
         &_row{
             display: flex;
             overflow-x: scroll;
@@ -51,5 +62,6 @@
             width: 88px;
             height: 116px;
         }
+        
     }
 }
