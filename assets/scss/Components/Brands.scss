@@ -1,6 +1,5 @@
 .brands {
 
-
     &_content {
         display: flex;
         align-items: center;
@@ -31,7 +30,7 @@
 
         grid-auto-rows: 1fr;
         /* Har bir qator balandligini bir xil qiladi */
-        max-height: calc(2 * 200px + 20px); // 2 qator, 1 row-gap
+        max-height: calc(2 * 210px + 20px); // 2 qator, 1 row-gap
         overflow: hidden;
     }
 
@@ -60,6 +59,28 @@
     &_card-title {
         font-size: 16px;
         color: $gray-10;
+    }
+
+    &_btn{
+        margin: 20px auto;
+        max-width: 333px;
+        width: 100%;
+        padding: 12px 20px;
+        background-color: $gray-8;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 550;
+        color: $gray-10;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+        transition: all 0.1s ease;
+
+        &:hover{
+            background-color: $gray-2;
+        }
     }
 
     // Mobile 
@@ -94,6 +115,14 @@
 
         &_routs{
             font-size: 17px;
+        }
+
+        &_button{
+            padding: 0 20px;
+        }
+        &_btn{
+            flex-shrink: 1;
+            max-width: 750px;
         }
     }
 }

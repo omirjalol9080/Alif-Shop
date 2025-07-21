@@ -1,6 +1,7 @@
 "use client";
 
 
+import AppIcon from '@/assets/icons/AppIcon';
 import LeftIcon from '@/assets/icons/LeftIcons';
 import axios from 'axios';
 import Link from 'next/link'
@@ -41,6 +42,9 @@ function Brands() {
                             </div>
                         ))
                     }
+                </div>
+                <div className="brands_button">
+                    <button className='brands_btn'><AppIcon /> Katalog o'tish</button>
                 </div>
             </div>
         </section>
