@@ -71,4 +71,15 @@
             display: none;
         }
     }
+
+    @include media(640){
+        &_row{
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        &_content-title{
+            max-width: 500px;
+        }
+    }
 }
