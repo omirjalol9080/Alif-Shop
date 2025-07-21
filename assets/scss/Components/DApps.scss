@@ -1,34 +1,38 @@
-.dapps{
+.dapps {
     background-color: $gray-13;
     border-bottom: 1px solid $gray-6;
 
-    &_row{
+    &_row {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
-    &_content-title{
+    &_content-title {
         max-width: 289px;
         margin-bottom: 8px;
         font-size: 24px;
         font-weight: 550;
     }
 
-    &_content-subtitle{
+    &_content-subtitle {
         max-width: 448px;
         margin-bottom: 16px;
         font-size: 16px;
         color: $gray-3;
     }
 
-    &_content-link{
+    &_content-link {
         display: flex;
         align-items: center;
         column-gap: 8px;
     }
 
-    &_cr{
+    &_open-app {
+        display: none;
+    }
+
+    &_cr {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -36,9 +40,35 @@
         text-align: center;
     }
 
-    &_cr-title{
+    &_cr-title {
         max-width: 158px;
         font-size: 14px;
         color: $gray-19;
+    }
+
+    @include media(1023) {
+
+        &_row {
+            justify-content: start;
+        }
+
+        &_open-app {
+            width: 100%;
+            display: block;
+            padding: 12px 20px;
+            background-color: $gray-1;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 550;
+        }
+
+        &_content-link {
+            display: none;
+        }
+
+        &_cr {
+            display: none;
+        }
     }
 }

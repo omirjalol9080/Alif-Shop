@@ -22,6 +22,7 @@ function DApps() {
                             <img src="https://alifshop.uz/_ipx/f_webp,s_141x38/images/app-gallery-icon.svg" alt="" />
                         </a>
                     </div>
+                    <a className='dapps_open-app' href="#">ilovani ochish</a>
                 </div>
                 <div className="dapps_cr">
                     <div className="dapps_cr-img">
