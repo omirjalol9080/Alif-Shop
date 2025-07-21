@@ -7,6 +7,7 @@ import DividerLine from '../DividerLine/DividerLine'
 import Praducts from '../Products/Praducts'
 import PraductsList from '../Products/PraductsList'
 import Brands from '../Brands/Brands'
+import DApps from '../DownApps/DApps'
 
 function Main() {
   return (
@@ -44,6 +45,7 @@ function Main() {
       <DividerLine/>
       <Brands/>
       <DividerLine/>
+      <DApps/>
     </main>
   )
 }
