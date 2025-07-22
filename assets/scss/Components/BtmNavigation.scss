@@ -34,5 +34,6 @@
 
     @include media(750) {
         display: block;
+        z-index: 1000;
     }
 }

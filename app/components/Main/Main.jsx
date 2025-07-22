@@ -44,7 +44,6 @@ function Main() {
       <Praducts title="Foydali" category="foydali" />
       <DividerLine/>
       <Brands/>
-      <DividerLine/>
       <DApps/>
     </main>
   )

@@ -6,6 +6,7 @@ import LeftIcon from '@/assets/icons/LeftIcons';
 import axios from 'axios';
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import DividerLine from '../DividerLine/DividerLine';
 
 function Brands() {
 
@@ -43,6 +44,7 @@ function Brands() {
                         ))
                     }
                 </div>
+                <DividerLine/>
                 <div className="brands_button">
                     <button className='brands_btn'><AppIcon /> Katalog o'tish</button>
                 </div>

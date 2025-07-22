@@ -1,4 +1,6 @@
 .brands {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 
     &_content {
         display: flex;
@@ -43,6 +45,7 @@
 
 
     &_card-img {
+        width: 200px;
         width: inherit;
         overflow: hidden;
         border-radius: 10px;
@@ -86,6 +89,10 @@
     // Mobile 
 
     @include media(750) {
+
+        .divider-line{
+            border: none;
+        }
 
         .container {
             padding: 0px;
