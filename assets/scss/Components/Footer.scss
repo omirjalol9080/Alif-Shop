@@ -62,4 +62,10 @@
             row-gap: 40px;
         }
     }
+
+    @include media(750){
+        &_data{
+            margin-bottom: 40px;
+        }
+    }
 }
