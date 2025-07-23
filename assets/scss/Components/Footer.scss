@@ -6,13 +6,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin-bottom: 40px;
     }
 
-    @include media(845){
-        &_row{
-            row-gap: 40px;
-        }
-    }
+    
 
     &_list{
         max-width: 270px;
@@ -31,15 +28,38 @@
     &_list-title{
         font-size: 16px;
         color: $gray-11;
+        transition: all 0.1s ease;
+
+        &:hover{
+            color: $gray-1;
+        }
     }
 
     &_list-row{
         display: flex;
         column-gap: 15px;
+        margin-bottom: 20px;
     }
 
     &_list-other{
         font-size: 18px;
         color: $gray-11;
+    }
+
+    &_data{
+        padding: 40px 0;
+        border-top: 1px solid $gray-20;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_data-title{
+        color: $gray-19;
+    }
+
+    @include media(845){
+        &_row{
+            row-gap: 40px;
+        }
     }
 }

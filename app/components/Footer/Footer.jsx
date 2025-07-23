@@ -32,7 +32,6 @@ function Footer() {
           </div>
 
           <div className="footer_list">
-
             <p className="footer_list-name">Biz ijtimoiy axborot vositalarida</p>
             <div className="footer_list-row">
               <Link href={`#`}>
@@ -54,9 +53,16 @@ function Footer() {
             <>
               <p className="footer_list-name">Axborot xizmati</p>
               <h3 className='footer_list-other'>@alifshop_uz</h3>
-              <h3 className='footer_list-other'>+998 555 12 12 12</h3>
+              <a href='tel:+998555121212' className='footer_list-other'>+998 555 12 12 12</a>
             </>
           </div>
+        </div>
+
+        <div className="footer_data">
+          <p className="footer_data-title">2025 © alifshop.uz</p>
+          <a href="#">
+            <img src="https://yandex.ru/cycounter?https://alifshop.uz&theme=dark&lang=ru" alt="Yandex Master" />
+          </a>
         </div>
       </div>
     </footer>
