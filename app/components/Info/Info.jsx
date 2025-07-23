@@ -1,40 +1,60 @@
 "use client";
 
-import React, { useState } from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 function Info() {
+  const [expanded, setExpanded] = useState({}); // ← obyekt
+  const [info, setInfos] = useState([]);
+  const maxLines = 6;
 
-    const [expanded, setExpanded] = useState(false);
-    const maxLines = 6;
+  const toggleExpand = (id) => {
+    setExpanded((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
 
-    return (
-        <section className='info'>
-            <div className="container">
-                <div className="info_list">
-                    <div className="info_card">
-                        <h1 className="info_card-title">Alif Shop</h1>
-                        <p
-                            className="info_card-subtitle"
-                            style={{
-                                display: "-webkit-box",
-                                WebkitLineClamp: expanded ? "unset" : maxLines,
-                                WebkitBoxOrient: "vertical",
-                                overflow: "hidden",
-                            }}
-                        >
-                            alifshop.uz - xaridorlarga tez va qulay tarzda turli xil tovarlarni sotib olish imkoniyatini beradigan marketpleys. alifshop.uz saytida smartfon, kompyuter, planshet, televizor, aqlli soat va boshqa ko'plab moslamalarni topishingiz mumkin. Bizning online do'konda elektronika, maishiy texnika, avtomobil va maishiy buyumlarning katta tanlovi mavjud. Biz barcha xalqaro standartlarga va umumiy qabul qilingan me'yorlarga muvofiq ishlaymiz. Alif do'konida kerakli tovarni toping!
-                        </p>
-                        <button
-                            className="toggleBtn"
-                            onClick={() => setExpanded(!expanded)}
-                        >
-                            {expanded ? "Yashirish ▲" : "Barchasini ko'rsatish"}
-                        </button>
-                    </div>
-                </div>
+  useEffect(() => {
+    axios.get("https://6dde240d7bb14ccf.mokky.dev/info")
+      .then((res) => {
+        setInfos(res.data);
+      })
+      .catch((err) => {
+        console.log("Xatolik:", err);
+      });
+  }, []);
+
+  return (
+    <section className='info'>
+      <div className="container">
+        <div className="info_list">
+          {info.map((item) => (
+            <div key={item.id} className="info_card">
+              <h1 className="info_card-title">{item.name}</h1>
+              <p
+                className="info_card-subtitle"
+                style={{
+                  display: "-webkit-box",
+                  WebkitLineClamp: expanded[item.id] ? "unset" : maxLines,
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                }}
+              >
+                {item.title}
+              </p>
+              <button
+                className="toggleBtn"
+                onClick={() => toggleExpand(item.id)}
+              >
+                {expanded[item.id] ? "Yashirish ▲" : "Barchasini ko'rsatish"}
+              </button>
             </div>
-        </section>
-    )
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default Info
+export default Info;
