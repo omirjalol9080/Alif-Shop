@@ -8,6 +8,7 @@ import Praducts from '../Products/Praducts'
 import PraductsList from '../Products/PraductsList'
 import Brands from '../Brands/Brands'
 import DApps from '../DownApps/DApps'
+import Info from '../Info/Info'
 
 function Main() {
   return (
@@ -45,6 +46,7 @@ function Main() {
       <DividerLine/>
       <Brands/>
       <DApps/>
+      <Info/>
     </main>
   )
 }
