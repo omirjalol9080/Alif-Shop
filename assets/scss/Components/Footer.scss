@@ -1,0 +1,45 @@
+.footer{
+    padding: 60px 0 0 0;
+    background-color: $gray-10;
+
+    &_row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @include media(845){
+        &_row{
+            row-gap: 40px;
+        }
+    }
+
+    &_list{
+        max-width: 270px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &_list-name{
+        font-size: 14px;
+        color: $gray-19;
+    }
+
+    &_list-title{
+        font-size: 16px;
+        color: $gray-11;
+    }
+
+    &_list-row{
+        display: flex;
+        column-gap: 15px;
+    }
+
+    &_list-other{
+        font-size: 18px;
+        color: $gray-11;
+    }
+}
