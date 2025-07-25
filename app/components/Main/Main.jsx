@@ -18,6 +18,8 @@ function Main() {
       <BCatigores/>
       <DividerLine/>
       <Navigation/>
+      <Praducts title="Chilla" category="chilla" />
+      <DividerLine/> 
       <Praducts title="Foydali" category="foydali" />
       <DividerLine/>  
       <PraductsList/>
@@ -25,8 +27,6 @@ function Main() {
       <Praducts title="Jaziramaga tayyorlaning" category="jazirama" />
       <DividerLine/> 
       <Praducts title="Avtotovarlar" category="avtotovar" />
-      <DividerLine/> 
-      <Praducts title="Foydali" category="foydali" />
       <DividerLine/> 
       <Praducts title="Foydali" category="foydali" />
       <DividerLine/> 
