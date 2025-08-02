@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 
 import { Pagination } from 'swiper/modules';
 import axios from 'axios';
+import DividerLine from '../DividerLine/DividerLine';
 
 function BCatigores() {
     const [bcatigores, setBcatigores] = useState([]);
@@ -31,36 +32,40 @@ function BCatigores() {
     }, []);
 
     return (
-        <section className='bcatigores'>
-            <div className="container">
-                <Swiper
-                    loop={true}
-                    modules={[Pagination]}
-                    pagination={{ clickable: true }}
-                    slidesPerView={1}
-                    slidesPerGroup={1}
-                    autoplay={false}
-                    className="bcatigores_swiper"
-                >
-                    {groupedData.map((group, index) => (
-                        <SwiperSlide key={index}>
-                            <div className="bcatigores_group">
-                                {group.map((item) => (
-                                    <div className="bcatigores_card" key={item.id}>
-                                        <div className="bcatigores_card-img">
-                                            <img src={item.img} alt="bcatigores image" />
+        <>
+            <section className='bcatigores'>
+                <div className="container">
+                    <Swiper
+                        loop={true}
+                        modules={[Pagination]}
+                        pagination={{ clickable: true }}
+                        slidesPerView={1}
+                        slidesPerGroup={1}
+                        autoplay={false}
+                        className="bcatigores_swiper"
+                    >
+                        {groupedData.map((group, index) => (
+                            <SwiperSlide key={index}>
+                                <div className="bcatigores_group">
+                                    {group.map((item) => (
+                                        <div className="bcatigores_card" key={item.id}>
+                                            <div className="bcatigores_card-img">
+                                                <img src={item.img} alt="bcatigores image" />
+                                            </div>
+                                            <p className='bcatigores_card-title' >{item.name}</p>
                                         </div>
-                                        <p className='bcatigores_card-title' >{item.name}</p>
-                                    </div>
-                                    
-                                ))}
 
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
-        </section>
+                                    ))}
+
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </section>
+            <DividerLine />
+        </>
+
     );
 }
 

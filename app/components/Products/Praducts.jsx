@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import axios from 'axios';
 import CardIcon from '@/assets/icons/CardIcon';
+import DividerLine from '../DividerLine/DividerLine';
 
 function Praducts({ title, category }) {
   const [products, setProducts] = useState([]);
@@ -25,63 +26,67 @@ function Praducts({ title, category }) {
   }, [category]);
 
   return (
-    <section className='praducts'>
-      <div className="container">
-        <div className="praducts_content">
-          <h1 className='praducts_title'>{title}</h1>
-          <Link className='praducts_routs' href="#">Hammasini ko'rish <LeftIcon /></Link>
-        </div>
+    <>
+      <section className='praducts'>
+        <div className="container">
+          <div className="praducts_content">
+            <h1 className='praducts_title'>{title}</h1>
+            <Link className='praducts_routs' href="#">Hammasini ko'rish <LeftIcon /></Link>
+          </div>
 
-        <div className="praducts_desktop-swiper">
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={10}
-            navigation={true}
-            breakpoints={{
-              0: { slidesPerView: 4, spaceBetween: 20 },
-              640: { slidesPerView: 3, spaceBetween: 30 },
-              765: { slidesPerView: 3, spaceBetween: 20 },
-              1015: { slidesPerView: 5, spaceBetween: 30 },
-              1300: { slidesPerView: 6, spaceBetween: 20 },
-            }}
-            modules={[Navigation]}
-            className="praducts_swiper"
-          >
-            {products.map((item) => (
-              <SwiperSlide key={item.id} className='praducts_card'>
-                <Link href={`/routes/products/${item.id}`}>
+          <div className="praducts_desktop-swiper">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={10}
+              navigation={true}
+              breakpoints={{
+                0: { slidesPerView: 4, spaceBetween: 20 },
+                640: { slidesPerView: 3, spaceBetween: 30 },
+                765: { slidesPerView: 3, spaceBetween: 20 },
+                1015: { slidesPerView: 5, spaceBetween: 30 },
+                1300: { slidesPerView: 6, spaceBetween: 20 },
+              }}
+              modules={[Navigation]}
+              className="praducts_swiper"
+            >
+              {products.map((item) => (
+                <SwiperSlide key={item.id} className='praducts_card'>
+                  <Link href={`/routes/products/${item.id}`}>
+                    <div className="praducts_card-img">
+                      <img src={item.img} alt={item.name} />
+                    </div>
+                    <h3 className="praducts_card-title">{item.name}</h3>
+                    <p className='praducts_card-tobe'>dan {Math.ceil(item.prices / 24).toLocaleString('ru-RU')} so'm/oyga</p>
+                    <p className='praducts_card-delprice'>{`${item.oldprices.toLocaleString()} so'm`}</p>
+                    <p className='praducts_card-price'>{`${item.prices.toLocaleString()} so'm`}</p>
+                    <button className='praducts_card-addcard'><CardIcon /> Savatga</button>
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          <div className="praducts_mobile">
+            <div className="praducts_mobile-list">
+              {products.map((item) => (
+                <Link className='praducts_list' key={item.id} href={`/routes/products/${item.id}`}>
                   <div className="praducts_card-img">
                     <img src={item.img} alt={item.name} />
                   </div>
                   <h3 className="praducts_card-title">{item.name}</h3>
                   <p className='praducts_card-tobe'>dan {Math.ceil(item.prices / 24).toLocaleString('ru-RU')} so'm/oyga</p>
-                  <p className='praducts_card-delprice'>{item.oldprices}</p>
-                  <p className='praducts_card-price'>{item.prices}</p>
+                  <p className='praducts_card-delprice'>{`${item.oldprices.toLocaleString()} so'm`}</p>
+                  <p className='praducts_card-price'>{`${item.prices.toLocaleString()} so'm`}</p>
                   <button className='praducts_card-addcard'><CardIcon /> Savatga</button>
                 </Link>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-
-        <div className="praducts_mobile">
-          <div className="praducts_mobile-list">
-            {products.map((item) => (
-              <Link className='praducts_list' key={item.id} href={`/routes/products/${item.id}`}>
-                <div className="praducts_card-img">
-                  <img src={item.img} alt={item.name} />
-                </div>
-                <h3 className="praducts_card-title">{item.name}</h3>
-                <p className='praducts_card-tobe'>dan {Math.ceil(item.prices / 24).toLocaleString('ru-RU')} so'm/oyga</p>
-                <p className='praducts_card-delprice'>{item.oldprices}</p>
-                <p className='praducts_card-price'>{item.prices}</p>
-                <button className='praducts_card-addcard'><CardIcon /> Savatga</button>
-              </Link>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <DividerLine/>
+    </>
+
   );
 }
 

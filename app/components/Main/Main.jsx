@@ -1,4 +1,6 @@
-import React from 'react'
+"use client";
+
+import React, { useEffect, useState } from 'react'
 import Cotigore from '../Catigores/Cotigore'
 import Navigation from '../BottomNavigation/Navigation'
 import Banner from '../Banner/Banner'
@@ -9,44 +11,34 @@ import PraductsList from '../Products/PraductsList'
 import Brands from '../Brands/Brands'
 import DApps from '../DownApps/DApps'
 import Info from '../Info/Info'
+import axios from 'axios'
 
 function Main() {
+
+  const [praductsCategores, setPraductsCategores] = useState([])
+
+  useEffect(() =>{
+    axios.get("https://6dde240d7bb14ccf.mokky.dev/praducts_categore").then((res) => {
+      setPraductsCategores(res.data)
+    }).catch((err) => console.lof(err, "Get Error"))
+  }, [])
+
   return (
     <main>
       <Cotigore/>
       <Banner/>
       <BCatigores/>
-      <DividerLine/>
-      <Navigation/>
-      <Praducts title="Chilla" category="chilla" />
-      <DividerLine/> 
-      <Praducts title="Foydali" category="foydali" />
-      <DividerLine/>  
+      {
+        praductsCategores.map((item) => (
+          <Praducts key={item.id} title={item.title} category={item.categore} />
+        ))
+      }
       <PraductsList/>
-      <DividerLine/> 
-      <Praducts title="Jaziramaga tayyorlaning" category="jazirama" />
-      <DividerLine/> 
-      <Praducts title="Avtotovarlar" category="avtotovar" />
-      <DividerLine/> 
-      <Praducts title="Foydali" category="foydali" />
-      <DividerLine/> 
-      <Praducts title="Foydali" category="foydali" />
-      <DividerLine/> 
-      <Praducts title="Foydali" category="foydali" />
-      <DividerLine/> 
-      <Praducts title="Foydali" category="foydali" />
-      <DividerLine/> 
-      <Praducts title="Foydali" category="foydali" />
-      <DividerLine/> 
-      <Praducts title="Foydali" category="foydali" />
-      <DividerLine/> 
-      <Praducts title="Foydali" category="foydali" />
-      <DividerLine/> 
-      <Praducts title="Foydali" category="foydali" />
       <DividerLine/>
       <Brands/>
       <DApps/>
       <Info/>
+      <Navigation/>
     </main>
   )
 }
