@@ -1,5 +1,8 @@
 import { notFound } from "next/navigation";
 import axios from "axios";
+import Header from "@/app/components/Header/Header";
+import Footer from "@/app/components/Footer/Footer";
+import DApps from "@/app/components/DownApps/DApps";
 
 async function getPraductsById(id) {
   try {
@@ -19,11 +22,11 @@ export default async function ProductPage({ params }) {
   if (!praducts) return notFound();
 
   return (
-    <div>
+    <>
       <img src={praducts.img} alt="img" />
       <h1>{praducts.name}</h1>
       <p>{praducts.oldprices}</p>
       <p>{praducts.prices}</p>
-    </div>
+    </>
   );
 }
